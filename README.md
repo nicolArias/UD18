@@ -21,7 +21,7 @@ Ejercicios de la unidad 18 (Conexión Java - MYSQL)
 En el enlace se debe descargar el conector, luego descomprimirlo y buscar el jar que se encuentra en la carpeta.
 
 Ejecutar el archivo e incluirlo en el proyecto de la siguiente forma:
-1. Dar clic derecho sobre el proyecto 
+1. Dar clic derecho sobre el proyecto > Build Path > Add External Archives...> (Aqui se desplegara una ventana para que busquemos el archivo jar, lo seleccionamos)
 
 ```
 
