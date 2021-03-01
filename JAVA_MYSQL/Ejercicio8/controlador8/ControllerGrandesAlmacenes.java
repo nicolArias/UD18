@@ -64,6 +64,11 @@ public class ControllerGrandesAlmacenes {
 		String crearTablaMR = cdMaquinasR.createTable(nombreB);
 		vVista.mostrarMensaje(crearTablaMR);
 	}
+	
+	public void tableVentas() {
+		String crearTablaV=cdVentas.createTable(nombreB);
+		vVista.mostrarMensaje(crearTablaV);
+	}
 
 	public void opcionMenu() {
 		String respMenu;
@@ -332,10 +337,10 @@ public class ControllerGrandesAlmacenes {
 			if(num==3) {//Eliminar venta por codigo cajero
 				deletV = cdVentas.deleteRecordxCodCajero(nombreB, codigo);
 				vVista.mostrarMensaje(deletV);
-			}else if(num==3) {//Eliminar  venta por codigo maquina
+			}else if(num==4) {//Eliminar  venta por codigo maquina
 				deletV = cdVentas.deleteRecordxCodMaquina(nombreB, codigo);
 				vVista.mostrarMensaje(deletV);
-			}else if(num==4) {//Eliminar venta por codigo producto
+			}else if(num==5) {//Eliminar venta por codigo producto
 				deletV = cdVentas.deleteRecordxCodProducto(nombreB, codigo);
 				vVista.mostrarMensaje(deletV);
 			}

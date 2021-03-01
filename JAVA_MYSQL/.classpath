@@ -12,8 +12,5 @@
 	<classpathentry kind="src" path="Ejercicio7"/>
 	<classpathentry kind="src" path="Ejercicio8"/>
 	<classpathentry kind="lib" path="C:/Users/Pc/Downloads/mysql-connector-java-8.0.23/mysql-connector-java-8.0.23.jar"/>
-	<classpathentry kind="src" path="Ejercicio5prueba"/>
-	<classpathentry kind="src" path="Ejercicio6prueba"/>
-	<classpathentry kind="src" path="Ejercicio7prueba"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

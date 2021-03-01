@@ -43,7 +43,7 @@ public class CrudReservas extends ConexionBD{
 		}
 
 		// METODO QUE INSERTA DATOS EN TABLAS MYSQL
-		public String insertData(String nomBD,String DNI,String numSerie,LocalDateTime comienzo,LocalDateTime fin) {
+		public String insertData(String nomBD,String DNI,String numSerie,String comienzo,String fin) {
 
 			String mensaje = "";
 			try {
