@@ -38,8 +38,7 @@ public class CrudAlmacenes extends ConexionBD{
 			Statement stdb = getConexion().createStatement();
 			stdb.executeUpdate(Querydb);
 
-			String Query = "INSERT INTO Almacenes (lugar,capacidad) VALUE(" + "\"" + lugar + "\"," + "\"" + capacidad
-					+ "\",); ";
+			String Query = "INSERT INTO Almacenes (lugar,capacidad) VALUE("+"\"" + lugar + "\"," + "\"" + capacidad+"\");";
 			Statement st = getConexion().createStatement();
 			st.executeUpdate(Query);
 
@@ -69,7 +68,7 @@ public class CrudAlmacenes extends ConexionBD{
 
 			while (resultSet.next()) {
 
-				consulta += "\nCódigo: " + resultSet.getString("DNI")
+				consulta += "\nCódigo: " + resultSet.getString("codigo")
 							+"\nNombre: "+resultSet.getString("lugar")
 							+"\nCapacidad: "+resultSet.getString("capacidad");
 			}

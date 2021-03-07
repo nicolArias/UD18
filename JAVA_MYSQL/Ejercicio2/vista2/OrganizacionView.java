@@ -68,7 +68,7 @@ public class OrganizacionView {
 			
 			String idDepartamento=JOptionPane.showInputDialog("Ingrese el codigo del departamento asociado:");
 			
-			return dniE+"/"+nombreE+"/"+idDepartamento;
+			return dniE+"/"+nombreE+"/"+apellidoE+"/"+idDepartamento;
 		}
 		
 		

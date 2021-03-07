@@ -1,6 +1,6 @@
 package controlador3;
 
-import javax.swing.JOptionPane;
+
 
 import clase.ConexionBD;
 import model3.CrudAlmacenes;
@@ -30,16 +30,16 @@ public class ControllerAlmacen {
 		
 		//Método de create
 		CrearBD();
-		tableAlmacenes();
-		tableCajas();
-		opcionMenu();
-		conexion.closeConnection();
+
 	}
 	
 	//Crear base de datos
 	public void CrearBD() {
 		String crearBDM=conexion.createDB(nombreB);
 		aVista.mostrarMensaje(crearBDM);
+		tableAlmacenes();
+		tableCajas();
+		opcionMenu();
 	}
 	
 	//TABLAS
@@ -118,6 +118,7 @@ public class ControllerAlmacen {
 			String lugar=cadena[0];
 			int capacidad=Integer.parseInt(cadena[1]);
 			String s_insertA=cdAlmacen.insertData(nombreB,lugar,capacidad);
+			aVista.mostrarMensaje(s_insertA);
 		}
 		
 		opcionMenu();

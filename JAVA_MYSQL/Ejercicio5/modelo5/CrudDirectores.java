@@ -20,15 +20,15 @@ public class CrudDirectores extends ConexionBD{
 						+ "(DNI VARCHAR(8) PRIMARY KEY,"
 						+ "nomApels VARCHAR(255),"
 						+ "DNIJefe_FK VARCHAR(8),"
-						+ "despacho_FK INT,"
+						+ "despacho_FK INT NOT NULL,"
 						+ "FOREIGN KEY (DNIJefe_FK)"
-						+ "REFERENCES Directores(DNI)"
-						+ "ON DELET CASCADE"
-						+ "ON UPDATE CASCADE,"
-						+ "FOREIGN KEY (despacho_FK)"
-						+ "REFERENCES Despachos(numero)"
-						+ "ON DELET CASCADE"
-						+ "ON UPDATE CASCADE)Engine=InnoDB;";
+						+ "\nREFERENCES Directores(DNI)"
+						+ "\nON DELETE SET NULL"
+						+ "\nON UPDATE CASCADE,"
+						+ "\nFOREIGN KEY (despacho_FK)"
+						+ "\nREFERENCES Despachos(numero)"
+						+ "\nON DELETE CASCADE"
+						+ "\nON UPDATE CASCADE)Engine=InnoDB;";
 				
 				Statement st = getConexion().createStatement();
 				st.executeUpdate(Query);
@@ -36,7 +36,7 @@ public class CrudDirectores extends ConexionBD{
 				mensaje = "Tabla 'Directores' creada con exito";
 
 			} catch (SQLException ex) {
-				mensaje = "Error creando tabla 'Directores'";
+				mensaje = "Error creando tabla 'Directores' "+ex;
 			}
 			return mensaje;
 		}
@@ -62,7 +62,7 @@ public class CrudDirectores extends ConexionBD{
 				mensaje = "Datos almacenados correctamente";
 
 			} catch (SQLException ex) {
-				mensaje = "Error en el almacenamiento \n Exception: " + ex;
+				mensaje = "Error en el almacenamiento \n Exception: " + ex +" "+DNI_FK;
 
 			}
 

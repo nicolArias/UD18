@@ -45,7 +45,7 @@ public class CrudPeliculas extends ConexionBD {
 
 				String Query = "INSERT INTO Peliculas (nombre,calificacionEdad) VALUE("
 								+ "\"" + nombre + "\"," 
-								+ "\"" + calificacionEdad+ "\",); ";
+								+ "\"" + calificacionEdad+ "\"); ";
 				
 				Statement st = getConexion().createStatement();
 				st.executeUpdate(Query);
@@ -121,7 +121,7 @@ public class CrudPeliculas extends ConexionBD {
 				Statement st = getConexion().createStatement();
 				st.executeUpdate(Query);
 
-				mensaje = "TABLA 'Almacenes' ELIMINADA con exito!";
+				mensaje = "TABLA 'Peliculas' ELIMINADA con exito!";
 
 			} catch (SQLException ex) {
 

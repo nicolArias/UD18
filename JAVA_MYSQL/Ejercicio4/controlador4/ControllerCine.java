@@ -113,6 +113,7 @@ public class ControllerCine {
 			String nombre=cadena[0];
 			int calificacionE=Integer.parseInt(cadena[1]);
 			String s_insertA=cdPelicula.insertData(nombreB,nombre,calificacionE);
+			cVista.mostrarMensaje(s_insertA);
 		}
 		opcionMenu();
 	}

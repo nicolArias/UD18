@@ -29,16 +29,19 @@ public class ControllerOrg {
 		
 		//Método de create
 		CrearBD();
-		tableDepartamentos();
+		/*tableDepartamentos();
 		tableEmpleados();
-		opcionMenu();
-		conexion.closeConnection();
+		opcionMenu();*/
+		//conexion.closeConnection();
 	}
 	
 	//Crear base de datos
 	public void CrearBD() {
 		String crearBDM=conexion.createDB(nombreB);
 		oVista.mostrarMensaje(crearBDM);
+		tableDepartamentos();
+		tableEmpleados();
+		opcionMenu();
 	}
 	
 	//TABLAS

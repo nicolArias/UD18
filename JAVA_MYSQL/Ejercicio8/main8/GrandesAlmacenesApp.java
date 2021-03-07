@@ -20,7 +20,7 @@ public class GrandesAlmacenesApp {
 		CrudVentas cdVentas=new CrudVentas();
 		VentasView vView=new VentasView();
 		
-		ControllerGrandesAlmacenes controller=new ControllerGrandesAlmacenes(cdCajeros,cdMaquinasR,cdProductos,vView);
+		ControllerGrandesAlmacenes controller=new ControllerGrandesAlmacenes(cdCajeros,cdMaquinasR,cdProductos,cdVentas,vView);
 	}
 
 }

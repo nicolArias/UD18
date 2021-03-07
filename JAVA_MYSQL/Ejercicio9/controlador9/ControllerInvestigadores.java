@@ -22,7 +22,7 @@ public class ControllerInvestigadores {
 
 	private String nombreB;
 
-	public ControllerInvestigadores(CrudFacultades cdFacultades,CrudEquipos cdEquipos,CrudInvestigadores cdInvestigadores,InvestigadoresView iView) {
+	public ControllerInvestigadores(CrudFacultades cdFacultades,CrudEquipos cdEquipos,CrudInvestigadores cdInvestigadores,CrudReservas cdReservas,InvestigadoresView iView) {
 
 		this.conexion = new ConexionBD();// Aqui ya conecta a la base de datos
 		this.cdFacultades=cdFacultades;

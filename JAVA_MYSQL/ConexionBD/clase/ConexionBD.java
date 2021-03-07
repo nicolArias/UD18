@@ -68,7 +68,7 @@ public class ConexionBD {
 				st.executeUpdate(Query);
 				System.out.println("DB creada con exito!");
 				mensaje="DB creada con exito!";
-			JOptionPane.showMessageDialog(null, "Se ha creado la DB " +baseD+ "de forma exitosa.");
+			JOptionPane.showMessageDialog(null, "Se ha creado la DB " +baseD+ " de forma exitosa.");
 			}catch(SQLException ex) {
 				System.out.println(ex.getMessage());
 				System.out.println("Error creando la DB.");

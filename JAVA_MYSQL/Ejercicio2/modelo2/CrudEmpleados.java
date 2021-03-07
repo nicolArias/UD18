@@ -82,8 +82,8 @@ public class CrudEmpleados extends ConexionBD {
 				while (resultSet.next()) {
 					mensaje+="\nDNI: " +  resultSet.getString("DNI")
 							+"\nNombre: " +  resultSet.getString("nombre")
-							+"\nApellidos: "+resultSet.getString("apellidos"
-							+"\nCodigo Departamento: "+resultSet.getString("departamento_FK"));
+							+"\nApellidos: "+resultSet.getString("apellidos")
+							+"\nCodigo Departamento: "+resultSet.getString("departamento_FK");
 				}
 			} catch (SQLException ex) {
 				

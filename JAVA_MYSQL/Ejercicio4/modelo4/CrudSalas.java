@@ -20,10 +20,10 @@ public class CrudSalas extends ConexionBD{
 						+ "(codigo INT PRIMARY KEY AUTO_INCREMENT,"
 						+ "nombre VARCHAR(100),"
 						+ "pelicula_FK INT,"
-						+ "FOREIGN KEY (pelicula_FK)"
-						+ "REFERENCES Peliculas(codigo)"
-						+ "ON DELET CASCADE"
-						+ "ON UPDATE CASCADE)Engine=InnoDB;";
+						+ "\nFOREIGN KEY (pelicula_FK)"
+						+ "\nREFERENCES Peliculas(codigo)"
+						+ "\nON DELETE CASCADE"
+						+ "\nON UPDATE CASCADE)Engine=InnoDB;";
 				
 				Statement st = getConexion().createStatement();
 				st.executeUpdate(Query);
@@ -47,7 +47,7 @@ public class CrudSalas extends ConexionBD{
 
 				String Query = "INSERT INTO Salas (nombre,pelicula_FK) VALUE("
 								+ "\"" + nombre + "\"," 
-								+ "\"" + pelicula_fk+ "\",); ";
+								+ "\"" + pelicula_fk+ "\"); ";
 				
 				Statement st = getConexion().createStatement();
 				st.executeUpdate(Query);
